@@ -5,8 +5,6 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
@@ -15,7 +13,7 @@ import android.widget.TextView;
  * Created by Administrator on 2017/12/16.
  */
 
-public class MyView extends AppCompatTextView {
+public class MyView extends TextView {
     private Paint mPaint;
     private float size;
     private int myColor,myBackgroundColor;
@@ -23,7 +21,7 @@ public class MyView extends AppCompatTextView {
         super(context);
     }
 
-    public MyView(Context context, @Nullable AttributeSet attrs) {
+    public MyView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(Color.BLUE);
